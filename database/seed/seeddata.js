@@ -4,6 +4,7 @@ import Doctor from "../models/Doctor.js";
 import User from "../models/User.js";
 import Patient from "../models/Patient.js";
 import Appointment from "../models/Appointment.js";
+import MedicalRecord from "../models/MedicalRecord.js";
 
 dotenv.config();
 connectDB();
@@ -50,6 +51,7 @@ const seedData = async () => {
     await User.deleteMany();
     await Patient.deleteMany();
     await Appointment.deleteMany();
+    await MedicalRecord.deleteMany();
 
     const insertedDoctors = await Doctor.insertMany(doctors);
 
@@ -137,7 +139,31 @@ const seedData = async () => {
       },
     ]);
 
-    console.log("Doctors, Users, Patients and Appointments seeded successfully");
+    await MedicalRecord.insertMany([
+      {
+        patientId: patients[0]._id,
+        doctorId: insertedDoctors[0]._id,
+        diagnosis: "Mild Heart Blockage",
+        prescription: "Medicine + Exercise",
+        notes: "Avoid oily food",
+      },
+      {
+        patientId: patients[1]._id,
+        doctorId: insertedDoctors[1]._id,
+        diagnosis: "Tooth Infection",
+        prescription: "Antibiotics",
+        notes: "Follow-up in 1 week",
+      },
+      {
+        patientId: patients[2]._id,
+        doctorId: insertedDoctors[2]._id,
+        diagnosis: "Migraine",
+        prescription: "Pain Relief Tablets",
+        notes: "Sleep properly",
+      },
+    ]);
+
+    console.log("All data seeded successfully");
     process.exit();
   } catch (error) {
     console.error(error);
