@@ -1,12 +1,14 @@
-const router = require("express").Router();
-const Patient = require("../models/Patient");
+import express from "express";
+import Patient from "../models/Patient.js";
+
+const router = express.Router();
 
 router.post("/", async (req, res) => {
   try {
     const patient = await Patient.create(req.body);
     res.json(patient);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json({ message: err.message });
   }
 });
 
@@ -15,8 +17,8 @@ router.get("/", async (req, res) => {
     const patients = await Patient.find().populate("userId");
     res.json(patients);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json({ message: err.message });
   }
 });
 
-module.exports = router;
+export default router;
