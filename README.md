@@ -45,9 +45,9 @@ A web-based Hospital Management System built using the MERN Stack (MongoDB, Expr
 * Authentication: JWT
 
 ## Team Members
-Member 1 Name – Frontend Development<br>
-Member 2 Name – Backend Development<br>
-Member 3 Name – Database & Testing
+Durgesh (project lead) – Database & Testing<br>
+Yashwant – Frontend Development<br>
+Adithya – Backend Development
 
 ## Team Project
 
