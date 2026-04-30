@@ -1,10 +1,11 @@
 import dotenv from "dotenv";
-import mongoose from "mongoose";
 import connectDB from "../config/db.js";
 import Doctor from "../models/Doctor.js";
+import User from "../models/User.js";
+import Patient from "../models/Patient.js";
+import Appointment from "../models/Appointment.js";
 
 dotenv.config();
-
 connectDB();
 
 const doctors = [
@@ -43,12 +44,100 @@ const doctors = [
   },
 ];
 
-const seedDoctors = async () => {
+const seedData = async () => {
   try {
     await Doctor.deleteMany();
-    await Doctor.insertMany(doctors);
+    await User.deleteMany();
+    await Patient.deleteMany();
+    await Appointment.deleteMany();
 
-    console.log("Doctors seeded successfully");
+    const insertedDoctors = await Doctor.insertMany(doctors);
+
+    const users = await User.insertMany([
+      {
+        name: "Rahul",
+        email: "rahul@gmail.com",
+        password: "123456",
+        role: "patient",
+        phone: "9876500001",
+      },
+      {
+        name: "Priya",
+        email: "priya@gmail.com",
+        password: "123456",
+        role: "patient",
+        phone: "9876500002",
+      },
+      {
+        name: "Aman",
+        email: "aman@gmail.com",
+        password: "123456",
+        role: "patient",
+        phone: "9876500003",
+      },
+    ]);
+
+    const patients = await Patient.insertMany([
+      {
+        userId: users[0]._id,
+        age: 22,
+        gender: "Male",
+        bloodGroup: "O+",
+        address: "Mysore",
+        emergencyContact: "9876511111",
+        medicalHistory: "Asthma",
+      },
+      {
+        userId: users[1]._id,
+        age: 24,
+        gender: "Female",
+        bloodGroup: "A+",
+        address: "Bangalore",
+        emergencyContact: "9876522222",
+        medicalHistory: "No major history",
+      },
+      {
+        userId: users[2]._id,
+        age: 21,
+        gender: "Male",
+        bloodGroup: "B+",
+        address: "Mandya",
+        emergencyContact: "9876533333",
+        medicalHistory: "Diabetes",
+      },
+    ]);
+
+    await Appointment.insertMany([
+      {
+        patientId: patients[0]._id,
+        doctorId: insertedDoctors[0]._id,
+        appointmentDate: new Date(),
+        appointmentTime: "10:00 AM",
+        status: "confirmed",
+        reason: "Chest Pain",
+        paymentStatus: "paid",
+      },
+      {
+        patientId: patients[1]._id,
+        doctorId: insertedDoctors[1]._id,
+        appointmentDate: new Date(),
+        appointmentTime: "11:30 AM",
+        status: "pending",
+        reason: "Tooth Pain",
+        paymentStatus: "pending",
+      },
+      {
+        patientId: patients[2]._id,
+        doctorId: insertedDoctors[2]._id,
+        appointmentDate: new Date(),
+        appointmentTime: "2:00 PM",
+        status: "completed",
+        reason: "Headache",
+        paymentStatus: "paid",
+      },
+    ]);
+
+    console.log("Doctors, Users, Patients and Appointments seeded successfully");
     process.exit();
   } catch (error) {
     console.error(error);
@@ -56,4 +145,4 @@ const seedDoctors = async () => {
   }
 };
 
-seedDoctors(); // calling the function 
+seedData();
