@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -10,28 +11,36 @@ function Login() {
   };
 
   return (
-    <div style={styles.container}>
-      <form onSubmit={handleLogin} style={styles.card}>
-        <h2>Login</h2>
+  <div style={styles.container}>
+    <form onSubmit={handleLogin} style={styles.card}>
+      <h2>Login</h2>
 
-        <input
-          type="email"
-          placeholder="Enter Email"
-          style={styles.input}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+      <input
+        type="email"
+        placeholder="Enter Email"
+        style={styles.input}
+        onChange={(e) => setEmail(e.target.value)}
+      />
 
-        <input
-          type="password"
-          placeholder="Enter Password"
-          style={styles.input}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+      <input
+        type="password"
+        placeholder="Enter Password"
+        style={styles.input}
+        onChange={(e) => setPassword(e.target.value)}
+      />
 
-        <button style={styles.button}>Login</button>
-      </form>
-    </div>
-  );
+      <button style={styles.button}>Login</button>
+
+      {/* 👇 Signup Option */}
+      <p style={{ marginTop: "15px" }}>
+        Don’t have an account?{" "}
+        <Link to="/register" style={{ color: "#007bff" }}>
+          Sign Up
+        </Link>
+      </p>
+    </form>
+  </div>
+);
 }
 
 const styles = {
