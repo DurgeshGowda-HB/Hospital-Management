@@ -1,0 +1,87 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.home-page {
+  min-height: 100vh;
+  background: #0f172a;
+  font-family: 'Segoe UI', sans-serif;
+  color: #e2e8f0;
+}
+
+.home-nav {
+  padding: 20px 40px;
+  background: rgba(30,41,59,0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #334155;
+  position: sticky; top: 0; z-index: 50;
+}
+.nav-logo { font-size: 22px; font-weight: 700; color: #f8fafc; }
+
+.hero-section {
+  text-align: center;
+  padding: 80px 40px 60px;
+  background: radial-gradient(ellipse at top, rgba(99,102,241,0.15) 0%, transparent 70%);
+}
+.hero-section h1 {
+  font-size: 48px; font-weight: 800;
+  background: linear-gradient(135deg, #818cf8, #60a5fa, #34d399);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  margin-bottom: 16px;
+}
+.hero-section > p { font-size: 18px; color: #94a3b8; max-width: 600px; margin: 0 auto 52px; line-height: 1.6; }
+
+.portal-cards {
+  display: flex; gap: 24px;
+  justify-content: center; flex-wrap: wrap;
+  max-width: 1100px; margin: 0 auto;
+}
+
+.portal-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 20px; padding: 36px 32px;
+  text-align: center; flex: 1; min-width: 260px; max-width: 320px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.portal-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+.portal-card .portal-icon { font-size: 56px; margin-bottom: 16px; }
+.portal-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 10px; color: #f8fafc; }
+.portal-card p { font-size: 14px; color: #64748b; line-height: 1.5; margin-bottom: 24px; }
+
+.portal-btn {
+  display: inline-block; padding: 12px 28px;
+  border-radius: 10px; text-decoration: none;
+  font-size: 14px; font-weight: 700; transition: all 0.2s;
+}
+.admin-btn { background: linear-gradient(135deg, #4f46e5, #6366f1); color: #fff; }
+.admin-btn:hover { transform: scale(1.05); box-shadow: 0 6px 16px rgba(99,102,241,0.4); }
+.doctor-btn { background: linear-gradient(135deg, #059669, #10b981); color: #fff; }
+.doctor-btn:hover { transform: scale(1.05); box-shadow: 0 6px 16px rgba(16,185,129,0.4); }
+.patient-btn { background: linear-gradient(135deg, #2563eb, #3b82f6); color: #fff; }
+.patient-btn:hover { transform: scale(1.05); box-shadow: 0 6px 16px rgba(59,130,246,0.4); }
+
+.admin-card { border-color: rgba(99,102,241,0.3); }
+.doctor-card { border-color: rgba(16,185,129,0.3); }
+.patient-card { border-color: rgba(59,130,246,0.3); }
+
+.features-section {
+  padding: 80px 40px;
+  background: rgba(30,41,59,0.5);
+  text-align: center;
+}
+.features-section h2 { font-size: 32px; font-weight: 700; margin-bottom: 40px; color: #f8fafc; }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px; max-width: 900px; margin: 0 auto;
+}
+.feature-item {
+  background: #1e293b; border: 1px solid #334155;
+  border-radius: 14px; padding: 28px 20px;
+}
+.feature-item h4 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: #f8fafc; }
+.feature-item p { font-size: 13px; color: #64748b; line-height: 1.5; }
+
+@media (max-width: 640px) {
+  .hero-section h1 { font-size: 30px; }
+  .hero-section > p { font-size: 15px; }
+}
