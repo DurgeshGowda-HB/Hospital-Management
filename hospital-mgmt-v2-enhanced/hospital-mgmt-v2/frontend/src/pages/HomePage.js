@@ -6,33 +6,33 @@ import './HomePage.css';
 const FEATURES = [
   {
     icon: '📅',
-    title: 'Appointment Booking',
-    desc: 'Patients can book from doctor-defined available slots. No double-booking — only valid open slots are shown.',
-  },
-  {
-    icon: '🗓️',
-    title: 'Doctor Scheduling',
-    desc: 'Doctors set weekly schedules and mark leave dates. Slots update automatically for patients.',
+    title: 'Easy Appointment Booking',
+    desc: 'Book your doctor appointments online in just a few clicks. Choose from available time slots that work best for your schedule.',
   },
   {
     icon: '✅',
-    title: 'Doctor Verification',
-    desc: 'Every doctor requires admin approval before they appear in the system. Verified badge on approval.',
+    title: 'Verified Doctors',
+    desc: 'All our doctors are board-certified and thoroughly verified. Trust qualified healthcare professionals for your medical needs.',
   },
   {
-    icon: '🔐',
-    title: 'Secure Role Login',
-    desc: 'Separate login portals for Patients, Doctors, and Admins — each with JWT-protected routes.',
+    icon: '💬',
+    title: 'Online Consultation',
+    desc: 'Connect with doctors from the comfort of your home. Virtual consultations available for non-emergency medical concerns.',
+  },
+  {
+    icon: '�️',
+    title: 'Schedule Management',
+    desc: 'View doctor availability in real-time and manage your appointments easily. Get reminders before your scheduled visits.',
   },
   {
     icon: '🏥',
-    title: 'Appointment Approval',
-    desc: 'Admin reviews and approves patient appointments before they are confirmed in the system.',
+    title: 'Multiple Departments',
+    desc: 'Access specialized care across various medical departments including cardiology, neurology, orthopedics, and more.',
   },
   {
-    icon: '👥',
-    title: 'Patient Management',
-    desc: 'Full patient profile management, appointment history, and prescription records in one place.',
+    icon: '�',
+    title: 'Patient Support',
+    desc: 'Our dedicated support team is here to help you with appointment booking, rescheduling, and any healthcare inquiries.',
   },
 ];
 
@@ -40,46 +40,46 @@ const SERVICES = [
   {
     icon: '🫀',
     name: 'Cardiology',
-    desc: 'Heart disease consultation, ECG analysis, and cardiac care management.',
+    desc: 'Advanced cardiac care including preventive screenings, diagnostic ECG, and comprehensive heart disease management by certified specialists.',
     tag: 'Available',
   },
   {
     icon: '🧠',
     name: 'Neurology',
-    desc: 'Brain and nervous system disorders — diagnosis, scheduling, and follow-ups.',
+    desc: 'Expert diagnosis and treatment for neurological conditions with state-of-the-art imaging and personalized care plans for brain health.',
     tag: 'Available',
   },
   {
     icon: '🦴',
     name: 'Orthopedics',
-    desc: 'Bone, joint, and muscle care with specialist consultation and scheduling.',
+    desc: 'Specialized musculoskeletal care covering sports injuries, joint replacement, and rehabilitation with experienced orthopedic surgeons.',
     tag: 'Available',
   },
   {
     icon: '👁️',
     name: 'Ophthalmology',
-    desc: 'Eye exams, vision tests, and eye care appointments managed digitally.',
+    desc: 'Comprehensive eye care services including vision correction, cataract surgery, and routine eye examinations with modern diagnostic technology.',
     tag: 'Available',
   },
   {
     icon: '🦷',
-    name: 'Dental',
-    desc: 'Dental appointments, routine checkups, and oral health management.',
+    name: 'Dental Care',
+    desc: 'Complete oral health services from preventive care and cosmetic dentistry to advanced restorative procedures by qualified dental professionals.',
     tag: 'Available',
   },
   {
     icon: '🩺',
-    name: 'General Medicine',
-    desc: 'General health checkups, prescriptions, and specialist referrals.',
+    name: 'Internal Medicine',
+    desc: 'Primary care and specialized treatment for adult health conditions with focus on preventive medicine and chronic disease management.',
     tag: 'Available',
   },
 ];
 
 const STATS = [
-  { icon: '👨‍⚕️', number: '50+', label: 'Verified Doctors' },
-  { icon: '🧑‍🤝‍🧑', number: '500+', label: 'Registered Patients' },
-  { icon: '📋', number: '1200+', label: 'Appointments Managed' },
-  { icon: '🏥', number: '10+', label: 'Departments' },
+  { icon: '👨‍⚕️', number: '50+', label: 'Board-Certified Specialists' },
+  { icon: '🧑‍🤝‍🧑', number: '500+', label: 'Active Patients' },
+  { icon: '📋', number: '1200+', label: 'Successful Consultations' },
+  { icon: '🏥', number: '10+', label: 'Medical Departments' },
 ];
 
 /* ─── Counter animation hook ───────────────────── */
@@ -197,9 +197,9 @@ const HomePage = () => {
             </button>
           ))}
           <hr style={{ margin: '8px 0', borderColor: '#e2e8f0' }} />
-          <Link to="/patient/login" style={{ color: '#1a56db', fontWeight: 600, fontSize: 15, textDecoration: 'none', padding: '8px 0' }} onClick={() => setMenuOpen(false)}>Patient Login</Link>
-          <Link to="/doctor/login" style={{ color: '#1a56db', fontWeight: 600, fontSize: 15, textDecoration: 'none', padding: '8px 0' }} onClick={() => setMenuOpen(false)}>Doctor Login</Link>
-          <Link to="/admin/login" style={{ color: '#64748b', fontWeight: 600, fontSize: 15, textDecoration: 'none', padding: '8px 0' }} onClick={() => setMenuOpen(false)}>Admin Login</Link>
+          <Link to="/patient/login" style={{ color: '#1a56db', fontWeight: 600, fontSize: 15, textDecoration: 'none', padding: '8px 0' }} onClick={() => setMenuOpen(false)}>Patient Portal</Link>
+          <Link to="/doctor/login" style={{ color: '#1a56db', fontWeight: 600, fontSize: 15, textDecoration: 'none', padding: '8px 0' }} onClick={() => setMenuOpen(false)}>Doctor Portal</Link>
+          <Link to="/admin/login" style={{ color: '#64748b', fontWeight: 600, fontSize: 15, textDecoration: 'none', padding: '8px 0' }} onClick={() => setMenuOpen(false)}>Admin Access</Link>
         </div>
       )}
 
@@ -208,29 +208,26 @@ const HomePage = () => {
         <div className="hp-hero-content">
           <div className="hp-hero-tag">
             <span className="hp-hero-tag-dot" />
-            Hospital Management System
+            Trusted Healthcare Services
           </div>
 
           <h1 className="hp-hero-title">
-            Smarter Healthcare,<br />
-            <em>Simpler Management</em>
+            Your Health, Our Priority<br />
+            <em>Book Appointments Online</em>
           </h1>
 
           <p className="hp-hero-subtitle">
-            A complete hospital management platform with appointment scheduling,
-            doctor verification, dynamic slot booking, and admin approval —
-            all in one place.
+            Schedule doctor consultations with verified specialists at your convenience.
+            Easy online booking, real-time availability, and quality healthcare services —
+            all designed for your wellbeing.
           </p>
 
           <div className="hp-hero-buttons">
             <Link to="/patient/login" className="hp-hero-btn patient">
-              🧑‍🤝‍🧑 Patient Login
+              Book Appointment
             </Link>
-            <Link to="/doctor/login" className="hp-hero-btn doctor">
-              👨‍⚕️ Doctor Login
-            </Link>
-            <Link to="/admin/login" className="hp-hero-btn admin">
-              🔑 Admin Login
+            <Link to="/patient/login" className="hp-hero-btn doctor">
+              View Doctors
             </Link>
           </div>
         </div>
@@ -287,11 +284,11 @@ const HomePage = () => {
       <section id="features" className="hp-section">
         <div className="hp-section-inner">
           <div className="hp-section-header center">
-            <div className="hp-section-label">What We Offer</div>
-            <h2 className="hp-section-title">Built for Modern Healthcare</h2>
+            <div className="hp-section-label">Why Choose Us</div>
+            <h2 className="hp-section-title">Quality Healthcare Services</h2>
             <p className="hp-section-desc">
-              Every feature is designed to reduce manual work and bring
-              clarity to hospital operations — for patients, doctors, and admins alike.
+              We make it simple to connect with doctors and manage your health appointments.
+              Experience hassle-free healthcare booking with trusted medical professionals.
             </p>
           </div>
           <div className="hp-features-grid">
@@ -310,11 +307,11 @@ const HomePage = () => {
       <section id="services" className="hp-section" style={{ background: '#fff' }}>
         <div className="hp-section-inner">
           <div className="hp-section-header center">
-            <div className="hp-section-label">Departments</div>
-            <h2 className="hp-section-title">Hospital Departments</h2>
+            <div className="hp-section-label">Medical Specialties</div>
+            <h2 className="hp-section-title">Comprehensive Care Departments</h2>
             <p className="hp-section-desc">
-              Browse our specialized departments and book appointments with
-              verified doctors from any specialty.
+              Access specialized healthcare services across multiple departments with board-certified physicians
+              dedicated to delivering exceptional patient outcomes through evidence-based medicine.
             </p>
           </div>
           <div className="hp-services-grid">
@@ -335,26 +332,25 @@ const HomePage = () => {
         <div className="hp-section-inner">
           <div className="hp-about-grid">
             <div className="hp-about-text">
-              <div className="hp-section-label">About the System</div>
-              <h2 className="hp-section-title">A Complete Hospital Workflow Solution</h2>
+              <div className="hp-section-label">About MediCare</div>
+              <h2 className="hp-section-title">Your Trusted Healthcare Partner</h2>
               <p>
-                MediCare HMS is a full-stack MERN project built to simulate
-                a real hospital management environment. It covers end-to-end
-                workflows from patient registration to appointment approval.
+                MediCare Hospital is dedicated to providing exceptional healthcare services
+                with compassion and expertise. Our team of qualified doctors and medical professionals
+                are committed to your health and wellbeing.
               </p>
               <p>
-                The system supports three distinct roles — Patient, Doctor,
-                and Admin — each with their own protected dashboard and
-                dedicated operations. Doctors are onboarded through an
-                admin verification step before they can accept appointments.
+                We offer convenient online appointment booking, verified specialist consultations,
+                and comprehensive care across multiple medical departments. Your health journey
+                is our priority, and we strive to make healthcare accessible and stress-free.
               </p>
               <div className="hp-about-checks">
                 {[
-                  'JWT-based authentication for all roles',
-                  'Doctor approval workflow via Admin panel',
-                  'Dynamic slot booking with conflict prevention',
-                  'Admin-controlled appointment approval',
-                  'Responsive UI for all screen sizes',
+                  'Board-certified doctors and specialists',
+                  'Easy online appointment scheduling',
+                  'Multiple medical departments under one roof',
+                  'Patient-centered care approach',
+                  '24/7 appointment booking available',
                 ].map((item, i) => (
                   <div className="hp-about-check" key={i}>
                     <div className="hp-about-check-icon">✓</div>
@@ -366,10 +362,10 @@ const HomePage = () => {
 
             <div className="hp-about-visual">
               {[
-                { icon: '🔐', val: '3', label: 'User Roles' },
-                { icon: '⚡', val: 'MERN', label: 'Tech Stack' },
-                { icon: '📋', val: 'REST', label: 'API Type' },
-                { icon: '🛡️', val: 'JWT', label: 'Auth Method' },
+                { icon: '�‍⚕️', val: '50+', label: 'Expert Doctors' },
+                { icon: '🏥', val: '10+', label: 'Departments' },
+                { icon: '🧑‍🤝‍🧑', val: '500+', label: 'Happy Patients' },
+                { icon: '⭐', val: '4.8', label: 'Patient Rating' },
               ].map((c, i) => (
                 <div className="hp-about-mini-card" key={i}>
                   <div className="hp-about-mini-icon">{c.icon}</div>
@@ -385,20 +381,17 @@ const HomePage = () => {
       {/* ── CTA / Contact ────────────────────────── */}
       <section id="contact" className="hp-cta">
         <div className="hp-cta-inner">
-          <h2>Ready to Get Started?</h2>
+          <h2>Ready to Book Your Appointment?</h2>
           <p>
-            Choose your role and log in to access your dashboard.
-            New users can register as a patient or doctor directly from the login page.
+            Take the first step towards better health. Schedule your consultation with
+            our verified doctors today. New patients can register and book appointments easily.
           </p>
           <div className="hp-cta-buttons">
             <Link to="/patient/login" className="hp-cta-btn primary">
-              🧑‍🤝‍🧑 Patient Portal
+              Book Appointment
             </Link>
-            <Link to="/doctor/login" className="hp-cta-btn ghost">
-              👨‍⚕️ Doctor Portal
-            </Link>
-            <Link to="/admin/login" className="hp-cta-btn ghost">
-              🔑 Admin Portal
+            <Link to="/patient/login" className="hp-cta-btn ghost">
+              View Doctors
             </Link>
           </div>
         </div>
@@ -408,45 +401,48 @@ const HomePage = () => {
       <footer className="hp-footer">
         <div className="hp-footer-top">
           <div>
-            <div className="hp-footer-logo-text">Medi<span>Care</span> HMS</div>
+            <div className="hp-footer-logo-text">Medi<span>Care</span> Hospital</div>
             <p className="hp-footer-brand-desc">
-              A student-built MERN stack hospital management system with
-              full role-based access, appointment workflows, and doctor verification.
+              Your trusted healthcare partner providing quality medical services
+              with verified doctors and convenient online appointment booking.
+              Your health is our priority.
             </p>
           </div>
 
           <div>
-            <div className="hp-footer-col-title">Portals</div>
+            <div className="hp-footer-col-title">Quick Links</div>
             <ul className="hp-footer-links">
+              <li><Link to="/patient/login">Book Appointment</Link></li>
+              <li><Link to="/patient/login">View Doctors</Link></li>
               <li><Link to="/patient/login">Patient Login</Link></li>
-              <li><Link to="/doctor/login">Doctor Login</Link></li>
+              <li><Link to="/doctor/login">doctor Login</Link></li>
               <li><Link to="/admin/login">Admin Login</Link></li>
+
             </ul>
           </div>
 
           <div>
-            <div className="hp-footer-col-title">System</div>
+            <div className="hp-footer-col-title">Services</div>
             <ul className="hp-footer-links">
+              <li><a href="#services" onClick={e => { e.preventDefault(); scrollTo('services'); }}>Departments</a></li>
               <li><a href="#features" onClick={e => { e.preventDefault(); scrollTo('features'); }}>Features</a></li>
-              <li><a href="#services" onClick={e => { e.preventDefault(); scrollTo('services'); }}>Services</a></li>
-              <li><a href="#about" onClick={e => { e.preventDefault(); scrollTo('about'); }}>About</a></li>
+              <li><a href="#about" onClick={e => { e.preventDefault(); scrollTo('about'); }}>About Us</a></li>
             </ul>
           </div>
 
           <div>
-            <div className="hp-footer-col-title">Tech Stack</div>
+            <div className="hp-footer-col-title">Contact</div>
             <ul className="hp-footer-links">
-              <li><a href="#about">MongoDB</a></li>
-              <li><a href="#about">Express.js</a></li>
-              <li><a href="#about">React.js</a></li>
-              <li><a href="#about">Node.js</a></li>
+              <li>📞 +1 (555) 123-4567</li>
+              <li>📧 info@medicarehospital.com</li>
+              <li>📍 123 Healthcare Ave, Medical City</li>
             </ul>
           </div>
         </div>
 
         <div className="hp-footer-bottom">
-          <span>© 2026 MediCare Hospital Management System</span>
-          <span>Built with React · Node · MongoDB</span>
+          <span>© 2026 MediCare Hospital. All Rights Reserved.</span>
+          <span>Caring for Your Health, Every Day</span>
         </div>
       </footer>
 
