@@ -39,7 +39,7 @@ const PatientLogin = () => {
   return (
     <div className="auth-container patient-theme">
       <div className="auth-card">
-        <div className="auth-icon">🤒</div>
+        <div className="auth-icon"></div>
         <h1>Patient Portal</h1>
         <p className="auth-subtitle">Hospital Management System</p>
 
