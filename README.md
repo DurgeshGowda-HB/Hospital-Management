@@ -6,7 +6,7 @@ A full-stack MERN Hospital Management System with workflow-driven appointment bo
 
 👉 To explore the full application, please use the frontend link below:
 
-🔗 Frontend (User Interface): https://hospital-management-jtuqwmao1-durgesh-pro.vercel.app/  
+🔗 Frontend (User Interface):   https://hospital-management-gilt-nu.vercel.app/   
 🔗 Backend API: https://hospital-management-3-gapz.onrender.com  
 
 > ⚠️ Note: The backend is hosted on Render and may take a few seconds to respond on first request.
