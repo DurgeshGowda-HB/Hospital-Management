@@ -7,7 +7,7 @@ API.interceptors.request.use((config) => {
   if (token) config.headers.Authorization = `Bearer ${token}`;
   return config;
 });
-
+//added
 // Auth
 export const adminLogin = (data) => API.post('/auth/admin/login', data);
 export const doctorLogin = (data) => API.post('/auth/doctor/login', data);
