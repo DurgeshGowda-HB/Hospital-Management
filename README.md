@@ -12,9 +12,27 @@ A full-stack MERN Hospital Management System with workflow-driven appointment bo
 > ⚠️ Note: The backend is hosted on Render and may take a few seconds to respond on first request.
 ---
 
+
 ## 🚀 Tech Stack
 - **Backend:** Node.js, Express.js, MongoDB (Mongoose), JWT
 - **Frontend:** React.js (JavaScript), React Router DOM, Axios
+
+---
+
+## 🐳 Docker Support
+
+Docker images are available on Docker Hub:
+
+* Backend: `durgeshgowda/hospital-mgmt:backend-v1`
+* Frontend: `durgeshgowda/hospital-mgmt:frontend-v1`
+
+Run the application using Docker Compose:
+
+```bash
+docker compose up -d
+```
+Docker Hub Repository:
+https://hub.docker.com/r/durgeshgowda/hospital-mgmt/tags
 
 ---
 
