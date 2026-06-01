@@ -11,7 +11,25 @@ A full-stack MERN Hospital Management System with workflow-driven appointment bo
 
 > ⚠️ Note: The backend is hosted on Render and may take a few seconds to respond on first request.
 ---
+## 📸 Screenshots
 
+### Home Page
+![Home](hospital-mgmt-v2-enhanced/hospital-mgmt-v2/screenshots/home.png)
+
+### Admin Dashboard
+![Admin Dashboard](hospital-mgmt-v2-enhanced/hospital-mgmt-v2/screenshots/admin_dashboard.png)
+
+### Doctor Verification Management
+![Manage Doctors](hospital-mgmt-v2-enhanced/hospital-mgmt-v2/screenshots/admin_doc.png)
+
+### Doctor Schedule & Slot Generation
+![Doctor Schedule](hospital-mgmt-v2-enhanced/hospital-mgmt-v2/screenshots/doc_shecdule.png)
+
+### Patient Appointment Booking
+![Book Appointment](hospital-mgmt-v2-enhanced/hospital-mgmt-v2/screenshots/book_appointment.png)
+
+### Prescription Management
+![Prescription Management](hospital-mgmt-v2-enhanced/hospital-mgmt-v2/screenshots/doc_pris.png)
 
 ## 🚀 Tech Stack
 - **Backend:** Node.js, Express.js, MongoDB (Mongoose), JWT
